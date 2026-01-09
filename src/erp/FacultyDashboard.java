@@ -87,14 +87,10 @@ private void loadRecentActivity() {
         con.close();
         
         // Set activity text
-        if (activity.length() > 0) {
-            lblRecentActivity.setText("<html>" + activity.toString().replace("\n", "<br>") + "</html>");
-        } else {
-            lblRecentActivity.setText("<html>No recent activity</html>");
-        }
+        
         
     } catch (Exception e) {
-        lblRecentActivity.setText("<html>Error loading activity</html>");
+        
         e.printStackTrace();
     }
 }
@@ -145,11 +141,6 @@ private String getRelativeTime(java.util.Date date) {
         postNotice = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        lblRecentActivity = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1200, 700));
@@ -250,7 +241,7 @@ private String getRelativeTime(java.util.Date date) {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Welcome Back Prof. ");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 370, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 610, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -300,26 +291,6 @@ private String getRelativeTime(java.util.Date date) {
         cardNotice.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 140));
 
         jPanel2.add(cardNotice, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 160, 270, 140));
-
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblRecentActivity.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblRecentActivity.setText("Recent Activity: ");
-        jPanel9.add(lblRecentActivity, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel12.setText("Attendance marked for Grade 5-A English (Today, 10:30 AM)");
-        jPanel9.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 860, 20));
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setText("Marks entered for Grade 5-B Math Unit Test 2 (Yesterday, 3:45 PM)");
-        jPanel9.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 860, 15));
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel14.setText(" Notice posted: 'Mid-term exam schedule' (2 days ago)");
-        jPanel9.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 95, 860, 20));
-
-        jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 900, 290));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 950, 620));
 
@@ -397,9 +368,6 @@ this.dispose();// TODO add your handling code here:
     private javax.swing.JPanel cardNotice;
     private javax.swing.JLabel enterMarks;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -410,10 +378,8 @@ this.dispose();// TODO add your handling code here:
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel lblFacultyDashboard;
     private javax.swing.JLabel lblFacultyName;
-    private javax.swing.JLabel lblRecentActivity;
     private javax.swing.JLabel markAttendance;
     private javax.swing.JLabel postNotice;
     private javax.swing.JPanel topPanel;
